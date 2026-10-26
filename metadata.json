@@ -1,0 +1,8 @@
+{
+  "name": "Cadastro de Cupons SJ - Elgin i9",
+  "description": "Sistema de emissão e impressão térmica de cupons em 2 vias para impressora Elgin i9. Sorteio Bambu Lab A1 Mini - Black Friday Loja SJ.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

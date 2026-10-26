@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Otimizações para Impressão Térmica Elgin i9 (Bobina de 80mm) */
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+
+@media print {
+  @page {
+    size: 80mm auto;
+    margin: 0;
+  }
+
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    width: 80mm !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .thermal-receipt-container {
+    width: 78mm;
+    max-width: 78mm;
+    margin: 0 auto;
+    padding: 1mm 2mm;
+    background: #ffffff;
+    color: #000000;
+  }
+
+  .thermal-ticket-page {
+    width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    padding-bottom: 12mm !important;
+    margin-bottom: 4mm !important;
+  }
+
+  .thermal-page-cut {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+}
+
